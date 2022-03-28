@@ -1,0 +1,828 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F501ABF-9ACF-4B65-B6BB-ED0BED5766CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RestaurantManagement</RootNamespace>
+    <AssemblyName>RestaurantManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>restaurant.ico</ApplicationIcon>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.Framework">
+      <HintPath>Lib\CrystalDecisions.Enterprise.Framework.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore">
+      <HintPath>Lib\CrystalDecisions.Enterprise.InfoStore.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource">
+      <HintPath>Lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared">
+      <HintPath>Lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms">
+      <HintPath>Lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.0, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=14.1.0.0, Culture=neutral, PublicKeyToken=055db68f670cfeab, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.TreeGX.dll</HintPath>
+    </Reference>
+    <Reference Include="FilterControls, Version=2.0.2432.37970, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SerialBoxes, Version=1.0.2441.15934, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="SoftwareLocker, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Services\2.0.0.0__b03f5f7f11d50a3a\System.Web.Services.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Stock\ExportBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\ExportBills.Designer.cs">
+      <DependentUpon>ExportBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\MeterialInBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\MeterialInBill.Designer.cs">
+      <DependentUpon>MeterialInBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UpdateMainServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bills\UpdateMainServices.Designer.cs">
+      <DependentUpon>UpdateMainServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CheckLogin.cs" />
+    <Compile Include="CheckSoftRegister.cs" />
+    <Compile Include="Bills\DetailBillByMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bills\DetailBillByMenu.Designer.cs">
+      <DependentUpon>DetailBillByMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\RegistedInfor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\RegistedInfor.Designer.cs">
+      <DependentUpon>RegistedInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogHistories.cs" />
+    <Compile Include="ProcessingEntity.cs" />
+    <Compile Include="Processing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Processing.Designer.cs">
+      <DependentUpon>Processing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resports\CrystalReportBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerSearchForBill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\CustomerSearchForBill.Designer.cs">
+      <DependentUpon>CustomerSearchForBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetRestaurantManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetRestaurantManagement.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Resports\CrystalReportSmallBill.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportSmallBill.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Roles\UserControlRoleManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Roles\UserControlRoleManagement.Designer.cs">
+      <DependentUpon>UserControlRoleManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\UpdateImportBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\UpdateImportBills.Designer.cs">
+      <DependentUpon>UpdateImportBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetComputerInfor.cs" />
+    <Compile Include="Stock\ImportBills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\ImportBills.Designer.cs">
+      <DependentUpon>ImportBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\MeterialManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\MeterialManagement.Designer.cs">
+      <DependentUpon>MeterialManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\ConnectionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\ConnectionManagement.Designer.cs">
+      <DependentUpon>ConnectionManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\MeterialAdjusting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\MeterialAdjusting.Designer.cs">
+      <DependentUpon>MeterialAdjusting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\UserControlLogHistories.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Systems\UserControlLogHistories.Designer.cs">
+      <DependentUpon>UserControlLogHistories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\UserControlRestaurantInfor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Systems\UserControlRestaurantInfor.Designer.cs">
+      <DependentUpon>UserControlRestaurantInfor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\EditTableName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\EditTableName.Designer.cs">
+      <DependentUpon>EditTableName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\AddTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\AddTable.Designer.cs">
+      <DependentUpon>AddTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\MovingTableInRegional.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\MovingTableInRegional.Designer.cs">
+      <DependentUpon>MovingTableInRegional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\MeterialGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\MeterialGroup.Designer.cs">
+      <DependentUpon>MeterialGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\RegisterMeterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\RegisterMeterial.Designer.cs">
+      <DependentUpon>RegisterMeterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\SubMeterialGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\SubMeterialGroup.Designer.cs">
+      <DependentUpon>SubMeterialGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\UpdateMeterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\UpdateMeterial.Designer.cs">
+      <DependentUpon>UpdateMeterial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\UpdateSubMeterialGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\UpdateSubMeterialGroup.Designer.cs">
+      <DependentUpon>UpdateSubMeterialGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\EditGropFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\EditGropFood.Designer.cs">
+      <DependentUpon>EditGropFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\AddSubGroupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\AddSubGroupMenu.Designer.cs">
+      <DependentUpon>AddSubGroupMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\AddMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\AddMenu.Designer.cs">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\UpdateMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\UpdateMenu.Designer.cs">
+      <DependentUpon>UpdateMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\ChangedTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\ChangedTables.Designer.cs">
+      <DependentUpon>ChangedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMainUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMainUI.Designer.cs">
+      <DependentUpon>FormMainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menus\GroupMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menus\GroupMenu.Designer.cs">
+      <DependentUpon>GroupMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Stock\ExportBills.resx">
+      <DependentUpon>ExportBills.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\MeterialInBill.resx">
+      <DependentUpon>MeterialInBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\DetailBillByMenu.resx">
+      <DependentUpon>DetailBillByMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlImportBillsReport.resx">
+      <DependentUpon>UserControlImportBillsReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UpdateMainServices.resx">
+      <DependentUpon>UpdateMainServices.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\RegistedInfor.resx">
+      <DependentUpon>RegistedInfor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Processing.resx">
+      <DependentUpon>Processing.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resports\CrystalReportBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\CustomerSearchForBill.resx">
+      <DependentUpon>CustomerSearchForBill.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resports\CrystalReportSmallBill.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportSmallBill.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roles\UserControlRoleManagement.resx">
+      <DependentUpon>UserControlRoleManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\UpdateImportBills.resx">
+      <DependentUpon>UpdateImportBills.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\ImportBills.resx">
+      <DependentUpon>ImportBills.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\MeterialManagement.resx">
+      <DependentUpon>MeterialManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\ConnectionManagement.resx">
+      <DependentUpon>ConnectionManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\MeterialAdjusting.resx">
+      <DependentUpon>MeterialAdjusting.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\UserControlLogHistories.resx">
+      <DependentUpon>UserControlLogHistories.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\UserControlRestaurantInfor.resx">
+      <DependentUpon>UserControlRestaurantInfor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\EditTableName.resx">
+      <DependentUpon>EditTableName.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\AddTable.resx">
+      <DependentUpon>AddTable.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\MovingTableInRegional.resx">
+      <DependentUpon>MovingTableInRegional.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\MeterialGroup.resx">
+      <DependentUpon>MeterialGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\RegisterMeterial.resx">
+      <DependentUpon>RegisterMeterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\SubMeterialGroup.resx">
+      <DependentUpon>SubMeterialGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\UpdateMeterial.resx">
+      <DependentUpon>UpdateMeterial.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\UpdateSubMeterialGroup.resx">
+      <DependentUpon>UpdateSubMeterialGroup.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\EditGropFood.resx">
+      <DependentUpon>EditGropFood.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\AddSubGroupMenu.resx">
+      <DependentUpon>AddSubGroupMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\AddMenu.resx">
+      <DependentUpon>AddMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\UpdateMenu.resx">
+      <DependentUpon>UpdateMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\ChangedTables.resx">
+      <DependentUpon>ChangedTables.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMainUI.resx">
+      <DependentUpon>FormMainUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\GroupMenu.resx">
+      <DependentUpon>GroupMenu.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menus\UserControlMenuList.resx">
+      <DependentUpon>UserControlMenuList.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tables\RegionalManagement.resx">
+      <DependentUpon>RegionalManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlMainServices.resx">
+      <DependentUpon>UserControlMainServices.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\RegisterCustomer.resx">
+      <DependentUpon>RegisterCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\UpdateCustomer.resx">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\RegisterStaff.resx">
+      <DependentUpon>RegisterStaff.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers\UserControlCustomerManagement.resx">
+      <DependentUpon>UserControlCustomerManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\UserControlStockManagement.resx">
+      <DependentUpon>UserControlStockManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\UserControlStaffManagement.resx">
+      <DependentUpon>UserControlStaffManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Staffs\UpdateStaff.resx">
+      <DependentUpon>UpdateStaff.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlSalesBillReport.resx">
+      <DependentUpon>UserControlSalesBillReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\UsercontrolUnitManagement.resx">
+      <DependentUpon>UsercontrolUnitManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\ChangedPassoword.resx">
+      <DependentUpon>ChangedPassoword.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlReportMainUI.resx">
+      <DependentUpon>UserControlReportMainUI.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\UserControlDesktop.resx">
+      <DependentUpon>UserControlDesktop.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlMenuReport.resx">
+      <DependentUpon>UserControlMenuReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlMeterialImport.resx">
+      <DependentUpon>UserControlMeterialImport.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\MeterialInventories.resx">
+      <DependentUpon>MeterialInventories.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bills\UserControlBillManagement.resx">
+      <DependentUpon>UserControlBillManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Systems\UserControlSystemConfig.resx">
+      <DependentUpon>UserControlSystemConfig.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Menus\UserControlMenuList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Menus\UserControlMenuList.Designer.cs">
+      <DependentUpon>UserControlMenuList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tables\RegionalManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tables\RegionalManagement.Designer.cs">
+      <DependentUpon>RegionalManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlMainServices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlMainServices.Designer.cs">
+      <DependentUpon>UserControlMainServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\RegisterCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\RegisterCustomer.Designer.cs">
+      <DependentUpon>RegisterCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\UpdateCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customers\UpdateCustomer.Designer.cs">
+      <DependentUpon>UpdateCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\RegisterStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\RegisterStaff.Designer.cs">
+      <DependentUpon>RegisterStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customers\UserControlCustomerManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Customers\UserControlCustomerManagement.Designer.cs">
+      <DependentUpon>UserControlCustomerManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\UserControlStockManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Stock\UserControlStockManagement.Designer.cs">
+      <DependentUpon>UserControlStockManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\UserControlStaffManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Staffs\UserControlStaffManagement.Designer.cs">
+      <DependentUpon>UserControlStaffManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Staffs\UpdateStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Staffs\UpdateStaff.Designer.cs">
+      <DependentUpon>UpdateStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlSalesBillReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlSalesBillReport.Designer.cs">
+      <DependentUpon>UserControlSalesBillReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\UsercontrolUnitManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Systems\UsercontrolUnitManagement.Designer.cs">
+      <DependentUpon>UsercontrolUnitManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlImportBillsReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlImportBillsReport.Designer.cs">
+      <DependentUpon>UserControlImportBillsReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\ChangedPassoword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systems\ChangedPassoword.Designer.cs">
+      <DependentUpon>ChangedPassoword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlReportMainUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlReportMainUI.Designer.cs">
+      <DependentUpon>UserControlReportMainUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\UserControlDesktop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Systems\UserControlDesktop.Designer.cs">
+      <DependentUpon>UserControlDesktop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlMenuReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlMenuReport.Designer.cs">
+      <DependentUpon>UserControlMenuReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlMeterialImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlMeterialImport.Designer.cs">
+      <DependentUpon>UserControlMeterialImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock\MeterialInventories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\MeterialInventories.Designer.cs">
+      <DependentUpon>MeterialInventories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bills\UserControlBillManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Bills\UserControlBillManagement.Designer.cs">
+      <DependentUpon>UserControlBillManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Systems\UserControlSystemConfig.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Systems\UserControlSystemConfig.Designer.cs">
+      <DependentUpon>UserControlSystemConfig.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avalibletable.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\use.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1369428042_check-all-delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fork6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1369428296_layout_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MutipleChoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\content-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\virtualintegration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1369841178_taskbar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1369914393_Class.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\update_apple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSetRestaurantManagement.xsc">
+      <DependentUpon>DataSetRestaurantManagement.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetRestaurantManagement.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetRestaurantManagement.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetRestaurantManagement.xss">
+      <DependentUpon>DataSetRestaurantManagement.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\start.png" />
+    <None Include="Resources\Logons.png" />
+    <None Include="Resources\LoginRestaurant.png" />
+    <None Include="Resources\Exit.png" />
+    <None Include="Resources\ConnectionOpen.gif" />
+    <None Include="Resources\emailcoming.jpg" />
+    <None Include="Resources\tools_config.png" />
+    <None Include="Resources\LoginSystem.png" />
+    <None Include="Resources\database_key.png" />
+    <None Include="Resources\preferences-desktop-wallpaper.png" />
+    <None Include="Resources\button_cancel.png" />
+    <None Include="Resources\information.jpg" />
+    <None Include="Resources\ftp_server_check.jpg" />
+    <None Include="Resources\processing.gif" />
+    <None Include="Resources\banner.png" />
+    <Content Include="restaurant.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantCommon\RestaurantCommon.csproj">
+      <Project>{B6B6ECA8-2EE1-44FE-A202-1DBD5C1A4A37}</Project>
+      <Name>RestaurantCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantController\RestaurantController.csproj">
+      <Project>{12B90B5A-25BE-4FF0-B36F-223D4A649E9C}</Project>
+      <Name>RestaurantController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RestaurantDTO\RestaurantDTO.csproj">
+      <Project>{890621DA-A3EC-433F-A4AF-E8631C54B755}</Project>
+      <Name>RestaurantDTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

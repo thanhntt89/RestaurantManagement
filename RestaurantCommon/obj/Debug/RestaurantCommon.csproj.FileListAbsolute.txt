@@ -1,0 +1,15 @@
+E:\Projects\2013\RestaurantManagement\RestaurantCommon\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\2013\RestaurantManagement\RestaurantCommon\bin\Debug\RestaurantCommon.dll
+E:\Projects\2013\RestaurantManagement\RestaurantCommon\bin\Debug\RestaurantCommon.pdb
+E:\Projects\2013\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.dll
+E:\Projects\2013\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.pdb
+E:\ThanhNT\RestaurantManagement\RestaurantCommon\bin\Debug\RestaurantCommon.dll
+E:\ThanhNT\RestaurantManagement\RestaurantCommon\bin\Debug\RestaurantCommon.pdb
+E:\ThanhNT\RestaurantManagement\RestaurantCommon\obj\Debug\ResolveAssemblyReference.cache
+E:\ThanhNT\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.dll
+E:\ThanhNT\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.pdb
+E:\Jimmii\Git\RestaurantManagement\RestaurantCommon\bin\Debug\RestaurantCommon.dll
+E:\Jimmii\Git\RestaurantManagement\RestaurantCommon\bin\Debug\RestaurantCommon.pdb
+E:\Jimmii\Git\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.csproj.CoreCompileInputs.cache
+E:\Jimmii\Git\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.dll
+E:\Jimmii\Git\RestaurantManagement\RestaurantCommon\obj\Debug\RestaurantCommon.pdb
